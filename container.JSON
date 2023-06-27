@@ -1,0 +1,247 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2022-03-11 09:04:49",
+    "containerVersion": {
+        "path": "accounts/6000889256/containers/60379289/versions/0",
+        "accountId": "6000889256",
+        "containerId": "60379289",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6000889256/containers/60379289",
+            "accountId": "6000889256",
+            "containerId": "60379289",
+            "name": "gtm-conversion-external.pagedemo.co/",
+            "publicId": "GTM-PRQ99Z5",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1646988560530",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000889256/containers/60379289/workspaces?apiLink=container",
+            "mode": "FULL"
+        },
+        "tag": [
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "tagId": "6",
+                "name": "instapage.setcookie",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n    {{instapage.setCookieJs}}('pageId', window.__page_id, 1800000, '/', {{instapage.domainName}});\n  {{instapage.setCookieJs}}('pageVariation', window.__variant, 1800000, '/', {{instapage.domainName}});\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1646988985565",
+                "firingTriggerId": [
+                    "4"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "tagId": "9",
+                "name": "instapage.insert.ect.code",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>var pageId = {{instapage.pageId}};var pageVariation = {{instapage.pageVariation}}</script>\n<script type=\"text/javascript\" src=\"//storage.googleapis.com/instapage-assets/conversion-external.js\"></script><iframe class=\"instapage-noscrap\" src=\"//d3mwhxgzltpnyp.cloudfront.net/local-storage/index.html\" name=\"instapage-local-storage\" height=\"0px\" width=\"0px\" onload=\"(function() { InstapageExternalConversion(pageId, pageVariation); })();\" style=\"display: block;\"></iframe>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1646989036073",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "triggerId": "4",
+                "name": "instapage.landing.page.trigger",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "gtm-conversion"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1646988725023"
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "triggerId": "7",
+                "name": "instapage.conversion.page.trigger",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "final"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1646988710775"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "variableId": "3",
+                "name": "instapage.domainName",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "pagedemo.co"
+                    }
+                ],
+                "fingerprint": "1646988688718",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "variableId": "5",
+                "name": "instapage.setCookieJs",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  return function(name, value, ms, path, domain) {\n    if (!name || !value) {\n      return;\n    }\n    var d;\n    var cpath = path ? '; path=' + path : '';\n    var cdomain = domain ? '; domain=' + domain : '';\n    var expires = '';\n    if (ms) {\n      d = new Date();\n      d.setTime(d.getTime() + ms);\n      expires = '; expires=' + d.toUTCString();\n    }\n    document.cookie = name + \"=\" + value + expires + cpath + cdomain;\n  }\n}"
+                    }
+                ],
+                "fingerprint": "1646988688720",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "variableId": "8",
+                "name": "instapage.pageId",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "pageId"
+                    }
+                ],
+                "fingerprint": "1646988688719",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "variableId": "10",
+                "name": "instapage.pageVariation",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "pageVariation"
+                    }
+                ],
+                "fingerprint": "1646989143505",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6000889256",
+                "containerId": "60379289",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1646989489784",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000889256/containers/60379289/versions/0?apiLink=version"
+    }
+}
