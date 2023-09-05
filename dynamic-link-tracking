@@ -1,0 +1,774 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2023-08-16 10:33:20",
+    "containerVersion": {
+        "path": "accounts/6000780615/containers/135015321/versions/0",
+        "accountId": "6000780615",
+        "containerId": "135015321",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6000780615/containers/135015321",
+            "accountId": "6000780615",
+            "containerId": "135015321",
+            "name": "Instapage dynamic GTM",
+            "publicId": "GTM-KNWTZF8P",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1689672572974",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000780615/containers/135015321/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-KNWTZF8P"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "tagId": "8",
+                "name": "instapage.form.tag",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n\nwindow.__eventBus.on('formSubmit', function (eventArgument) {\n        var e = document.querySelector('[data-id=\"' + eventArgument +'\"]')\n        window.dataLayer = window.dataLayer || [];\n        dataLayer.push({\n            'event': 'instapageFormSubmission',\n            'gtm.element': e,\n            'gtm.elementClasses': e.className || '',\n            'gtm.elementId': e.id || '',\n            'gtm.elementTarget': e.target || '',\n            'gtm.elementUrl': e.href || e.action || '',\n            'gtm.originalEvent': e\n        });\n    });\n\n    \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1689672901442",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "UNLIMITED",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "tagId": "17",
+                "name": "instapage.element.id.tag",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  if (!Element.prototype.matches) {\n    Element.prototype.matches = \n        Element.prototype.matchesSelector || \n        Element.prototype.mozMatchesSelector ||\n        Element.prototype.msMatchesSelector || \n        Element.prototype.oMatchesSelector || \n        Element.prototype.webkitMatchesSelector ||\n        function(s) {\n            var matches = (this.document || this.ownerDocument).querySelectorAll(s),\n                i = matches.length;\n            while (--i >= 0 && matches.item(i) !== this) {}\n            return i > -1;            \n        };\n  }\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1689672901443",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "tagId": "23",
+                "name": "GA4 - Configuration Tag",
+                "type": "gaawc",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendPageView",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableSendToServerContainer",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementId",
+                        "value": "{{GA4 Measurement ID}}"
+                    }
+                ],
+                "fingerprint": "1690192230748",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "tagId": "25",
+                "name": "instapage.image.event",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "image_click"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "image"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{instapage.element.id}} - Variant {{instapage.PageVariant}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "redirect_url"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Click Element}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4 - Configuration Tag"
+                    }
+                ],
+                "fingerprint": "1690524036445",
+                "firingTriggerId": [
+                    "11"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "tagId": "26",
+                "name": "instapage.form.event",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "form_submit"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "form_button_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{instapage.ClickText}} - Variant {{instapage.PageVariant}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4 - Configuration Tag"
+                    }
+                ],
+                "fingerprint": "1690524044651",
+                "firingTriggerId": [
+                    "4"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "tagId": "27",
+                "name": "instapage.button.event",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "button_click"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "button_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Click Text}} - Variant {{instapage.PageVariant}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "redirect_url"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Click Element}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4 - Configuration Tag"
+                    }
+                ],
+                "fingerprint": "1690524052623",
+                "firingTriggerId": [
+                    "13"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "tagId": "28",
+                "name": "instapage.link.event",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "link_click"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "link_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Click Text}} - Variant {{instapage.PageVariant}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "redirect_url"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Click Element}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4 - Configuration Tag"
+                    }
+                ],
+                "fingerprint": "1690463608522",
+                "firingTriggerId": [
+                    "9"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "triggerId": "4",
+                "name": "instapage.form",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "instapageFormSubmission"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1689672901438"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "triggerId": "9",
+                "name": "instapage.link",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".widget.item-absolute a"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".btn.item-block"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".url-link.item-content-box.item-block"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1689672901439"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "triggerId": "11",
+                "name": "instapage.link.image",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".widget.item-absolute .contents.cropped.item-block a.url-link.item-content-box.item-block"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1689672901439"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "triggerId": "13",
+                "name": "instapage.button",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".btn.item-block"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1689672901440"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "variableId": "5",
+                "name": "instapage.experimentID",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": " function(){\n        \n        return !window.__experiment_id ? 'none' : window.__experiment_id;\n    }"
+                    }
+                ],
+                "fingerprint": "1689672901442",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "variableId": "6",
+                "name": "instapage.ReadCookie",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n\treturn function(name) {\n        var nameEQ = name + \"=\";\n        var ca = document.cookie.split(';');\n        for(var i=0;i < ca.length;i++) {\n            var c = ca[i];\n            while (c.charAt(0)==' ') c = c.substring(1,c.length);\n            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);\n        }\n        return null;\n    }\n}"
+                    }
+                ],
+                "fingerprint": "1689672901442",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "variableId": "7",
+                "name": "instapage.PageID",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){  \n  return window.__page_id;\n}"
+                    }
+                ],
+                "fingerprint": "1689672901442",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "variableId": "14",
+                "name": "instapage.PageVariant",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "\n    function(){\n        \n        return window.__variant;\n    }"
+                    }
+                ],
+                "fingerprint": "1689672901443",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "variableId": "16",
+                "name": "instapage.ClickText",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  var el = document.querySelector('form .btn');\n  return el.innerText.trim();\n}"
+                    }
+                ],
+                "fingerprint": "1689672901443",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "variableId": "18",
+                "name": "instapage.element.id.2",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  return function(target, selector) {\n    while (!target.matches(selector) && !target.matches('body')) {\n      target = target.parentElement;\n    }\n    return target.matches(selector) ? target : undefined;\n  }\n}"
+                    }
+                ],
+                "fingerprint": "1689672901443"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "variableId": "19",
+                "name": "instapage.element.id",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  var el = {{instapage.element.id.2}}({{Click Element}}, 'div[id*=\"element-\"]');\n  return typeof el !== 'undefined' ? el.id : undefined;\n}"
+                    }
+                ],
+                "fingerprint": "1689672901444"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "variableId": "24",
+                "name": "GA4 Measurement ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-Y2YV5PMYRH"
+                    }
+                ],
+                "fingerprint": "1690189989160",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "FORM_CLASSES",
+                "name": "Form Classes"
+            },
+            {
+                "accountId": "6000780615",
+                "containerId": "135015321",
+                "type": "FORM_TEXT",
+                "name": "Form Text"
+            }
+        ],
+        "fingerprint": "1692182000795",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000780615/containers/135015321/versions/0?apiLink=version"
+    }
+}
